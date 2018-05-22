@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pomodoro Clock</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style/main.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/pomodoro.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodoro Clock</h1>
+        <div class="row">
+          <div class="col-md-2 col-lg-3"></div>
+        <div class="col-md-4 col-lg-3">
+          <h3>Session Time</h3>
+          <button class="btn adjust" onclick="sessionMinus()">-</button>  
+          <span id="sessionTime"></span>
+          <button class="btn adjust" onclick="sessionPlus()">+</button>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <h3>Break Time</h3>
+          <button class="btn adjust" onclick="breakMinus()">-</button>  
+          <span id="breakTime"></span>
+          <button class="btn adjust" onclick="breakPlus()">+</button>
+        </div>
+          <div class="col-md-2 col-lg-3"></div>
+        </div>
+        
+        <div class="radial-progress">
+        <div class="circle">
+          <div class="mask full">
+            <div class="fill"></div>
+          </div>
+          <div class="mask half">
+            <div class="fill"></div>
+            <div class="fill fix"></div>
+          </div>
+        </div>
+        <div class="inset">
+          <div id="time"></div>
+          <button id="controlBtn" class="btn btn-primary" onclick="start()">Start</button>
+          </div>
+      </div> 
+        <div id="state"></div>
+      </div>
+      
+</body>
+</html>

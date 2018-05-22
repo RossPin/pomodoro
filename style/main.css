@@ -1,0 +1,54 @@
+.container {
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 100px;
+}
+
+#sessionTime, #breakTime {
+  font-size: 36px;
+  margin: 0 10px;  
+}
+
+#time, #state, h1 {
+  font-size: 72px;
+}
+
+.progress {
+  margin-top: 50px;  
+}
+
+.radial-progress {  
+  background-color: rgb(175,175,190); 
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.radial-progress, .radial-progress .fill, .radial-progress .mask {    
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+
+ .radial-progress .fill {
+    position: absolute;
+    background-color: rgb(66,139,202);
+    /* rect(<top>, <right>, <bottom>, <left>) */
+    clip: rect(0px, 150px, 300px, 0px);
+  }
+
+.radial-progress .mask {
+    position: absolute;
+    /* rect(<top>, <right>, <bottom>, <left>) */
+    clip: rect(0px, 300px, 300px, 150px);
+  }
+
+.radial-progress .inset {
+  width: 250px;
+    height: 250px;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 25px;
+    background-color: rgb(200,200,210);
+    border-radius: 50%;
+  padding-top: 50px;
+}
