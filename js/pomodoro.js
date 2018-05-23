@@ -87,6 +87,8 @@ function updateTime () {
   var secRemain = Math.floor(timeRemain % 60000 / 1000);
   barRotation(100-(timer-timeRemain)/(timer)*100);
   if (minRemain <= 0 && secRemain <= 0) { 
+    var sound = new Audio('sound/Hawk Call-SoundBible.com-1645841983.mp3');
+    sound.play();
     if (session) startBreak();                         else startSession();
   }
   else {    
