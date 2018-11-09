@@ -22,12 +22,14 @@ function set () {
 function start() {
   $('.adjust').prop('disabled', true);
   $('#controlBtn').attr('onclick', 'reset()');
-  $('#controlBtn').text('Reset');  
-  startSession();  
+  $('#controlBtn').text('Reset');
+  startSession();
+  sleep.prevent(); 
 }
 
 function reset() {
   stop = true;
+  sleep.allow()
   $('.adjust').prop('disabled', false);
   $('#controlBtn').attr('onclick', 'start()');
   $('#controlBtn').text('Start');
